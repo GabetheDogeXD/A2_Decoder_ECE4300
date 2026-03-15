@@ -1,2 +1,5 @@
 # A2_Decoder_ECE4300
-Description Test Title
+
+Sources: control, idExLatch, signExt, regfile 
+
+Test bench: Decoder
