@@ -5,13 +5,13 @@ Sources: control.v, idExLatch.v, signExt.v, regfile.v, Decoder.v
 Simulation: DecoderTB.v
 <br /> <br />
 
-control.v: <br />
+control.v: This segment <br />
 idExLatch.v: <br />
 signExt.v: <br />
-regfile.v: <br />
-Decoder.v: <br />
+regfile.v: register file that stores 32 bits in MIPS <br />
+Decoder.v: The main decoder for the whole code that handles the main outputs for the process. <br />
 <br />
-Decoder: Testbench file that 
+Decoder: Testbench file 
 <br /><br />
 
 Below is the final timing diagram that shows the decoder in action.
