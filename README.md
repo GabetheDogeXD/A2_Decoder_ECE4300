@@ -1,5 +1,5 @@
 # A2_Decoder_ECE4300
 
-Sources: control, idExLatch, signExt, regfile 
+Sources: control, idExLatch, signExt, regfile, Decoder
 
-Test bench: Decoder
+Simulationn: DecoderTB
