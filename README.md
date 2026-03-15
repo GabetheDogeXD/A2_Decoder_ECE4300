@@ -1,15 +1,15 @@
 # A2_Decoder_ECE4300
 
-Sources: control, idExLatch, signExt, regfile, Decoder
+Sources: control.v, idExLatch.v, signExt.v, regfile.v, Decoder.v
 <br />
-Simulation: DecoderTB 
+Simulation: DecoderTB.v
 <br /> <br />
 
-control.v: 
-idExLatch.v: 
-signExt.v: 
-regfile.v: 
-Decoder.v: 
+control.v: <br />
+idExLatch.v: <br />
+signExt.v: <br />
+regfile.v: <br />
+Decoder.v: <br />
 <br />
 Decoder: Testbench file that 
 <br /><br />
