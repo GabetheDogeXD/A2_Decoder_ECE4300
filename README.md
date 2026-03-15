@@ -2,4 +2,5 @@
 
 Sources: control, idExLatch, signExt, regfile, Decoder
 
-Simulationn: DecoderTB
+Simulation: DecoderTB (Needs to be coppied from Decoder tutorial will do it tomorrow)
+
