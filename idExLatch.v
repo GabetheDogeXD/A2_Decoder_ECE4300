@@ -25,12 +25,26 @@ module idExLatch(
 
 always@(posedge clk) begin
     if(rst) begin
-    // COMPLETE
-    // Set all of the outputs to 0
+    wb_out <= 2'd0;
+    mem_out <= 3'd0;
+    ctl_out <= 4'd0;
+    npc_out <= 32'd0;
+    readdat1_out <= 32'd0;
+    readdat2_out <= 32'd0;
+    sign_ext_out <= 32'd0;
+    instr_bits_20_16_out <= 5'd0;
+    instr_bits_15_11_out <= 5'd0;
     end
     else begin
         wb_out <= ctl_wb;
-        // COMPLETE the rest of the outputs
+        mem_out <= ctl_mem;
+        ctl_out <= ctl_ex;
+        npc_out <= npc;
+        readdat1_out <= readdat1;
+        readdat2_out <= readdat2;
+        sign_ext_out <= sign_ext;
+        instr_bits_20_16_out <= instr_bits_20_16;
+        instr_bits_15_11_out <= instr_bits_15_11;
      end
 end
 

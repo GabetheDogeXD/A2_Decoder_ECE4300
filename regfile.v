@@ -10,8 +10,7 @@ module regfile(
                         B_readdat2
 );
 
-    // COMPLETE
-    //Create an internal regfile called REG that is 32 bit wide regs with 32 addr
+reg [31:0] REG [31:0]; //Create an internal regfile called REG that is 32 bit wide regs with 32 addr
     
     
     initial begin
@@ -30,18 +29,16 @@ module regfile(
     
     always @(posedge clk) begin
         if (rst) begin
-        // COMPLETE
-        // Set A_readdat1 and B_readdat2 to 32 bits of 0's
+        A_readdat1 <= 32'd0;
+        B_readdat2 <= 32'd0; // Set A_readdat1 and B_readdat2 to 32 bits of 0's
         end
         else begin
             if (regwrite) begin
-            // COMPLETE
-            //Overwrite the value location rd within REG with writedata
+            REG[rd] <= writedata; //Overwrite the value location rd within REG with writedata
             end
             else begin
-            // COMPLETE
-            // Set A_readdat1 to the value at location rs within REG 
-            // Set B_readdat2 to the value at location within REG end
+            A_readdat1 <= REG[rs]; // Set A_readdat1 to the value at location rs within REG 
+            B_readdat2 <= REG[rt]; // Set B_readdat2 to the value at location within REG end
             end
             
         end     

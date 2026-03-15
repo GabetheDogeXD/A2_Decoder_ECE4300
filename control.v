@@ -8,9 +8,9 @@ module control(
 );
     parameter RTYPE = 6'b000000;
     // COMPLETE LW, SW, and BEQ //ADD MIPS stuff to the end of these bits
-    parameter LW = 6'b;
-    parameter SW = 6'b;
-    parameter BEQ = 6'b;
+    parameter LW = 6'b100011;
+    parameter SW = 6'b101011;
+    parameter BEQ = 6'b000100;
     parameter NOP = 6'b100000;
 
     // default values
@@ -22,7 +22,9 @@ end
 
 always @(posedge clk) begin 
     if (rst) begin
-        // COMPLETE: Set the outputs to 0
+        wb <= 2'd0;
+        mem <= 3'd0;
+        ex <= 4'd0;
     end
 
     case(opcode) 
@@ -33,23 +35,29 @@ always @(posedge clk) begin
         end
         
         LW: begin
-        // COMPLETE LW
+            wb <= 2'b11;
+            mem <= 3'b010;
+            ex <= 4'b0001;
         end
 
         SW: begin
-        // COMPLETE SW
+            wb <= 2'b00;
+            mem <= 3'b001;
+            ex <= 4'b0001;
         end
 
         BEQ: begin
-        // COMPLETE BEQ
+            wb <= 2'b00;
+            mem <= 3'b100;
+            ex <= 4'b0010;
         end
 
     default: begin // NOP
         $display ("Opcode not recognized.");
-        wb <= 2'de;
+        wb <= 2'd0;
         mem <= 3'd0;
         ex <= 4'd0;
-    end
+        end
     
     
         endcase
