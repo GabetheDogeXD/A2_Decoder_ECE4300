@@ -5,10 +5,10 @@ Sources: control.v, idExLatch.v, signExt.v, regfile.v, Decoder.v
 Simulation: DecoderTB.v
 <br /> <br />
 
-control.v: This segment <br />
+control.v: This segment interprets the wb, mem, ex signals and generates signals for them. <br />
 idExLatch.v: <br />
-signExt.v: <br />
-regfile.v: register file that stores 32 bits in MIPS <br />
+signExt.v: Preforms a sign extension which increases the bits needed for the 16 bit input. <br />
+regfile.v: Register file that stores 32 bits in MIPS and writes registers. <br />
 Decoder.v: The main decoder for the whole code that handles the main outputs for the process. <br />
 <br />
 Decoder: Testbench file 
