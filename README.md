@@ -2,6 +2,19 @@
 
 Sources: control, idExLatch, signExt, regfile, Decoder
 
-Simulation: DecoderTB (Needs to be coppied from Decoder tutorial will do it tomorrow)
+Simulation: DecoderTB 
+
+
+control.v: 
+idExLatch.v: 
+signExt.v: 
+regfile.v: 
+Decoder.v: 
+
+Decoder: Testbench file that 
+
+
+Below is the final timing diagram that shows the decoder in action.
+
 
 ![Final_Timing_Diagram](Final_Timing_Diagram.png)
